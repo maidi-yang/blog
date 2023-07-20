@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+<meta name="baidu-site-verification" content="jxvbm9TZ19">
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="liunx,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="rm -rf default.conf 删除ln -s /vagrant/nginx.conf default.conf 制定公用地址service nginx restart 重启nginx 快捷键tab:命令补全Ctrl+c：强行终止Ctrl+d 键盘输入结束或退出终端Ctrl+s 暂停当前程序，暂停后按下任意键恢复运行Ctrl+z 将当前程序放到后台运行，恢复到前台为命令fgCtrl+a 将">
+<meta name="keywords" content="liunx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="liunx基础指令">
+<meta property="og:url" content="http://yangleiweb.top/2018/11/01/liunx基础指令/index.html">
+<meta property="og:site_name" content="In my life">
+<meta property="og:description" content="rm -rf default.conf 删除ln -s /vagrant/nginx.conf default.conf 制定公用地址service nginx restart 重启nginx 快捷键tab:命令补全Ctrl+c：强行终止Ctrl+d 键盘输入结束或退出终端Ctrl+s 暂停当前程序，暂停后按下任意键恢复运行Ctrl+z 将当前程序放到后台运行，恢复到前台为命令fgCtrl+a 将">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-01T00:59:01.842Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="liunx基础指令">
+<meta name="twitter:description" content="rm -rf default.conf 删除ln -s /vagrant/nginx.conf default.conf 制定公用地址service nginx restart 重启nginx 快捷键tab:命令补全Ctrl+c：强行终止Ctrl+d 键盘输入结束或退出终端Ctrl+s 暂停当前程序，暂停后按下任意键恢复运行Ctrl+z 将当前程序放到后台运行，恢复到前台为命令fgCtrl+a 将">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yangleiweb.top/2018/11/01/liunx基础指令/">
+
+
+
+
+
+  <title>liunx基础指令 | In my life</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/maidi-yang" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">In my life</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            总览
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yangleiweb.top/2018/11/01/liunx基础指令/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="maidi yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="In my life">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">liunx基础指令</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-01T08:50:32+08:00">
+                2018-11-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/liunx/" itemprop="url" rel="index">
+                    <span itemprop="name">liunx</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/01/liunx基础指令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/01/liunx基础指令/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><em>rm -rf default.conf 删除<br>ln -s /vagrant/nginx.conf default.conf 制定公用地址<br>service nginx restart 重启nginx</em></p>
+<h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><p>tab:命令补全<br>Ctrl+c：强行终止<br>Ctrl+d 键盘输入结束或退出终端<br>Ctrl+s 暂停当前程序，暂停后按下任意键恢复运行<br>Ctrl+z 将当前程序放到后台运行，恢复到前台为命令fg<br>Ctrl+a 将光标移至输入行头，相当于Home键<br>Ctrl+e 将光标移至输入行末，相当于End键<br>Ctrl+k 删除从光标所在位置到行末<br>Alt+Backspace 向前删除一个单词<br>Shift+PgUp 将终端显示向上滚动<br>Shift+PgDn 将终端显示向下滚动</p>
+<h1 id="Shell-常用通配符"><a href="#Shell-常用通配符" class="headerlink" title="Shell 常用通配符"></a>Shell 常用通配符</h1><p>* 匹配 0 或多个字符<br>? 匹配任意一个字符<br>[list] 匹配 list 中的任意单一字符<br>[!list] 匹配 除list 中的任意单一字符以外的字符<br>[c1-c2] 匹配 c1-c2 中的任意单一字符 如：[0-9] [a-z]<br>{string1,string2,…} 匹配 string1 或 string2 (或更多)其一字符串<br>{c1..c2} 匹配 c1-c2 中全部字符 如{1..10}</p>
+<h1 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h1><p>touch 创建文件<br>mkdir 创建目录<br>ls 查看文件目录<br>man 调用手册<br>apt-get 搜索，安装软件<br>cat，nl 查看文件<br>chown 变更文件所有者 sudo chown 所有者 文件名 chown <a href="http://www.www" target="_blank" rel="noopener">www.www</a> 目录 -R<br>chmod 修改文件权限 chmod go-rw 文件名 chmod -R 777 文件名 “0”表示没有权限、“1”表示可执行权限、“2”表示可写权限、“4”表示可读权限。“7=1+2+4<br>cp 复制文件，复制目录需要带上-r参数 cp 文件名 目录，cp -r 文件名 目录<br>rm 删除文件，目录需要带上-r参数 rm 文件名 目录，rm -r 文件名 目录<br>mv 移动文件,重命名文件 mv 源目录文件 目的目录，mv 旧的文件名 新的文件名</p>
+<h1 id="用户管理命令"><a href="#用户管理命令" class="headerlink" title="用户管理命令"></a>用户管理命令</h1><p>su 切换命令<br>sudo 使用root权限<br>adduser 创建用户<br>groups 查看用户组<br>usermod 添加用户到用户组 sudo usermod -G sudo 用户名<br>deluser 删除用户 sudo deluser 用户名 –remove-home</p>
+<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p>定义变量：变量名 = 变量值<br>修改变量：<br>${变量名#匹配字串} 从头向后开始匹配，删除符合匹配字串的最短数据<br>${变量名##匹配字串} 从头向后开始匹配，删除符合匹配字串的最长数据<br>${变量名%匹配字串} 从尾向前开始匹配，删除符合匹配字串的最短数据<br>${变量名%%匹配字串} 从尾向前开始匹配，删除符合匹配字串的最长数据<br>${变量名/旧的字串/新的字串} 将符合旧字串的第一个字串替换为新的字串<br>${变量名//旧的字串/新的字串} 将符合旧字串的全部字串替换为新的字串<br>变量删除：unser 变量名</p>
+<h1 id="搜索文件"><a href="#搜索文件" class="headerlink" title="搜索文件"></a>搜索文件</h1><h2 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h2><p>快而全，通过“ /var/lib/mlocate/mlocate.db ”数据库查找，不过这个数据库也不是实时更新的，系统会使用定时任务每天自动执行 updatedb 命令更新一次，所以有时候你刚添加的文件，它可能会找不到，需要手动执行一次 updatedb 命令（在我们的环境中必须先执行一次该命令）。它可以用来查找指定目录下的不同文件类型<br>示例：locate /etc/sh，locate /usr/share/*.jpg</p>
+<h2 id="which"><a href="#which" class="headerlink" title="which"></a>which</h2><p>小而精，本身是 Shell 内建的一个命令，我们通常使用 which 来确定是否安装了某个指定的软件，因为它只从 PATH 环境变量指定的路径中去搜索命令<br>示例：which ma</p>
+<h2 id="find"><a href="#find" class="headerlink" title="find"></a>find</h2><p>精而细，通过文件类型、文件名进行查找而且可以根据文件的属性（如文件的时间戳，文件的权限等）进行搜索<br>格式：find [path] [option] [action]<br>示例：sudo find 目录 -name 文件名<br>通过时间搜索：<br>-atime 最后访问时间<br>-ctime 最后修改文件内容的时间<br>-mtime 最后修改文件属性的时间<br>示例： 列出home目录中，当天有改动的文件：find ~ -mtime 0<br>列出用户目录下比code文件夹新的文件：find ~ -newer /home/vagrant/Co</p>
+<h1 id="压缩文件："><a href="#压缩文件：" class="headerlink" title="压缩文件："></a>压缩文件：</h1><h2 id="zip"><a href="#zip" class="headerlink" title="zip"></a>zip</h2><p>zip -r -9 -q -o 压缩文件名.zip 需要压缩的文件路径<br>-r参数表示递归打包包含子目录的全部内容。，-q 参数表示为安静模式，即不向屏幕输出信息。-o表示输出文件，需在其后紧跟打包输出文件名。-e参数可以创建加密压缩包。<br>zip解压:：unzip -q 需要解压文件 -d 解压指定目录<br>查看压缩文件：du -h 压缩文件名 ，du -h -d 0 *.zip ~ | sort</p>
+<h2 id="rar"><a href="#rar" class="headerlink" title="rar"></a>rar</h2><p>rar的命令参数没有-，如果加上会报错。rar d 压缩文件名.rar 需要压缩的文件路径<br>rar解压：unrar e 压缩文件名.rar 需要解缩的文件路径</p>
+<h2 id="tar"><a href="#tar" class="headerlink" title="tar"></a>tar</h2><p>打包：tar -zcvf something.tar something<br>解包：tar -zxvf something.tar<br>指定路径：-C 参数</p>
+<h1 id="文件系统管理与磁盘操作"><a href="#文件系统管理与磁盘操作" class="headerlink" title="文件系统管理与磁盘操作"></a>文件系统管理与磁盘操作</h1><p>df -h 查看磁盘的容量<br>du -h -d 查看目录的容量</p>
+<h2 id="帮助命令："><a href="#帮助命令：" class="headerlink" title="帮助命令："></a>帮助命令：</h2><p>help 显示shell内建命令的帮助信息 ls –help<br>man 详细获取命令手册，不区分内建与外部命令。 man ls</p>
+<h2 id="任务计划crontab："><a href="#任务计划crontab：" class="headerlink" title="任务计划crontab："></a>任务计划crontab：</h2><p>格式：</p>
+<ul>
+<li>Example of job definition:# .—————- minute (0 - 59)# | .————- hour (0 - 23)# | | .———- day of month (1 - 31)# | | | .——- month (1 - 12) OR jan,feb,mar,apr …# | | | | .—- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat# | | | | |# <em> </em> <em> </em> <em> user-name command to be executed</em></li>
+</ul>
+<p>crontab -e 添加计划任务<br>crontab -e 查看计划任务<br>pgrep cron 查看任务执行<br>sudo tail -f 任务路径 查看到执行任务命令之后在日志中的信息反馈<br>crontab -r 删除alte计划任务</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/liunx/" rel="tag"># liunx</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/29/php基础部分/" rel="next" title="PHP基础部分">
+                <i class="fa fa-chevron-left"></i> PHP基础部分
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/01/thinkphp5导出excel/" rel="prev" title="thinkphp5导出excel">
+                thinkphp5导出excel <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="maidi yang">
+            
+              <p class="site-author-name" itemprop="name">maidi yang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/maidi-yang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:254884797@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#快捷键"><span class="nav-number">1.</span> <span class="nav-text">快捷键</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Shell-常用通配符"><span class="nav-number">2.</span> <span class="nav-text">Shell 常用通配符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#命令"><span class="nav-number">3.</span> <span class="nav-text">命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用户管理命令"><span class="nav-number">4.</span> <span class="nav-text">用户管理命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变量"><span class="nav-number">5.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搜索文件"><span class="nav-number">6.</span> <span class="nav-text">搜索文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#locate"><span class="nav-number">6.1.</span> <span class="nav-text">locate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#which"><span class="nav-number">6.2.</span> <span class="nav-text">which</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find"><span class="nav-number">6.3.</span> <span class="nav-text">find</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#压缩文件："><span class="nav-number">7.</span> <span class="nav-text">压缩文件：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#zip"><span class="nav-number">7.1.</span> <span class="nav-text">zip</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rar"><span class="nav-number">7.2.</span> <span class="nav-text">rar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tar"><span class="nav-number">7.3.</span> <span class="nav-text">tar</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件系统管理与磁盘操作"><span class="nav-number">8.</span> <span class="nav-text">文件系统管理与磁盘操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#帮助命令："><span class="nav-number">8.1.</span> <span class="nav-text">帮助命令：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务计划crontab："><span class="nav-number">8.2.</span> <span class="nav-text">任务计划crontab：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=26511658&auto=1&height=66"></iframe>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+<img src="https://static.dy208.cn/o_1dfilp8ruo521thr1hvf18ji17soa.png">
+<a href="https://beian.miit.gov.cn/" style="color:#f72b07" target="_blank">湘ICP备17022086号-1</a>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">maidi yang</span>
+
+  
+</div>
+
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">
+        本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    </span>
+
+    <span id="busuanzi_container_site_uv">
+      本站访客数<span id="busuanzi_value_site_uv"></span>人
+    </span>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'klek08bmrIrPwtrsHHMxcmmG-gzGzoHsz',
+        appKey: '4usFsW2qoL1DAyVzE0Y9J0uk',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/clicklove.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>
