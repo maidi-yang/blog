@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: In My Life
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
-language: en
+author: Gyro Yang
+language: cn
 timezone: ''
 
 # URL
@@ -40,7 +40,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -94,10 +94,23 @@ include:
 exclude:
 ignore:
 
+# 看板娘
+live2d:
+  enable: true
+  pluginModelPath: assets/
+  model:
+    use: live2d-widget-model-shizuku    #模板目录，在node_modules里,自己选择
+  display:
+    position: left
+    width: 300
+    height: 600
+  mobile:
+    show: false  #是否在手机进行显示
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
